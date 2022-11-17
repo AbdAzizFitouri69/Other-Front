@@ -7,8 +7,8 @@ WORKDIR /usr/src/app
 
 # copy these over first and run 'npm install' so the node_modules will be cached
 # until the package.json / lock changes
-COPY package*.json .
-COPY package-lock*.json .
+COPY package*.json ./
+COPY package-lock*.json ./
 RUN npm install --force
 RUN npm i -g @angular/cli
 
